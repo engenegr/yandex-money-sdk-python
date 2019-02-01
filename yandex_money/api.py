@@ -231,14 +231,14 @@ class Wallet(BasePayment):
                                               urlencode({
                                                   "client_id": client_id,
                                                   "redirect_uri": redirect_uri,
-                                                  "scope": " ".join(scope),
-                                                  "response_type": "code"
+                                                  "response_type": "code",                                            
+                                                  "scope": " ".join(scope)
                                               }))
 
     @classmethod
     def get_access_token(self, client_id, code, redirect_uri,
                          client_secret=None):
-        full_url = config['SP_MONEY_URL'] + "/oauth/token"
+        full_url = config['MONEY_URL'] + "/oauth/token"
         return self.process_result(requests.post(full_url, data={
             "code": code,
             "client_id": client_id,

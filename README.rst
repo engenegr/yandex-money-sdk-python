@@ -55,8 +55,9 @@ Using Yandex.Money API requires following steps
 4. Now you can use Yandex.Money API.
 
    .. code:: python
+       wallet = Wallet(access_token=access_token)
 
-       account_info = api.account_info()
+       account_info = wallet.account_info()
        balance = account_info['balance'] # and so on
 
        request_options = {
@@ -69,10 +70,10 @@ Using Yandex.Money API requires following steps
            "test_payment": true,
            "test_result": "success"
        };
-       request_result = api.request(request_options)
+       request_result = wallet.request_payment(request_options)
        # check status
 
-       process_payment = api.process({
+       process_payment = wallet.process_payment({
            "request_id": request_result['request_id'],
        })
        # check result
