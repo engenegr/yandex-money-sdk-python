@@ -55,6 +55,7 @@ Using Yandex.Money API requires following steps
 4. Now you can use Yandex.Money API.
 
    .. code:: python
+   
        wallet = Wallet(access_token=access_token)
 
        account_info = wallet.account_info()
@@ -69,7 +70,8 @@ Using Yandex.Money API requires following steps
            "label": "testPayment",
            "test_payment": true,
            "test_result": "success"
-       };
+       }
+       
        request_result = wallet.request_payment(request_options)
        # check status
 
@@ -81,6 +83,7 @@ Using Yandex.Money API requires following steps
            # show success page
        else:
            # something went wrong
+
 
 Payments from bank cards without authorization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
