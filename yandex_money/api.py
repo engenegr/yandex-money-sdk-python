@@ -226,12 +226,13 @@ class Wallet(BasePayment):
             })
 
     @classmethod
-    def build_obtain_token_url(self, client_id, redirect_uri, scope):
+    def build_obtain_token_url(self, client_id, redirect_uri,instance_name, scope):
         return "{}/oauth/authorize?{}".format(config['SP_MONEY_URL'],
                                               urlencode({
                                                   "client_id": client_id,
                                                   "redirect_uri": redirect_uri,
-                                                  "response_type": "code",                                            
+                                                  "response_type": "code",
+                                                  "instance_name": instance_name,
                                                   "scope": " ".join(scope)
                                               }))
 
