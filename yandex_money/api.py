@@ -227,7 +227,7 @@ class Wallet(BasePayment):
 
     @classmethod
     def build_obtain_token_url(self, client_id, redirect_uri,instance_name, scope):
-        return "{}/oauth/authorize?{}".format(config['SP_MONEY_URL'],
+        return "{}/oauth/authorize?{}".format(config['MONEY_URL'],
                                               urlencode({
                                                   "client_id": client_id,
                                                   "redirect_uri": redirect_uri,
