@@ -33,7 +33,7 @@ Using Yandex.Money API requires following steps
 1. Obtain token URL and redirect user's browser to Yandex.Money service.
    Note: ``client_id``, ``redirect_uri``, ``client_secret`` are
    constants that you get, when
-   `register <https://sp-money.yandex.ru/myservices/new.xml>`__ app in
+   `register <https://yoomoney.ru/myservices/new.xml>`__ app in
    Yandex.Money API.
 
    .. code:: python

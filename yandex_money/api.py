@@ -7,8 +7,8 @@ from . import exceptions
 
 # change it to debug/demo hosts
 config = {
-    'MONEY_URL': "https://money.yandex.ru",
-    'SP_MONEY_URL': "https://sp-money.yandex.ru"
+    'MONEY_URL': "https://yoomoney.ru",
+    'SP_MONEY_URL': "https://yoomoney.ru"
 }
 
 
@@ -17,7 +17,7 @@ class BasePayment(object):
     def send_request(cls, url, headers=None, body=None):
         if not headers:
             headers = {}
-        headers['User-Agent'] = "Yandex.Money.SDK/Python"
+        headers['User-Agent'] = "SDK/Python"
 
         if not body:
             body = {}
